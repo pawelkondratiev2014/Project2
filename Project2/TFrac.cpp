@@ -15,6 +15,11 @@ bool operator< (const TFrac& d1, const TFrac& d2)
     return (d1.numerator * d2.denominator) < (d2.numerator * d1.denominator);
 };
 
+bool operator== (const TFrac& d1, const TFrac& d2)
+{
+    return (d1.numerator * d2.denominator) == (d2.numerator * d1.denominator);
+};
+
 
 
 std::ostream& operator<< (std::ostream& out, const TFrac& d)

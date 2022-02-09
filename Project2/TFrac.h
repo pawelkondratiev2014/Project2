@@ -184,6 +184,7 @@ public:
 
 	friend bool operator> (const TFrac& d1, const TFrac& d2);
 	friend bool operator< (const TFrac& d1, const TFrac& d2);
+	friend bool operator== (const TFrac& d1, const TFrac& d2);
 
 	friend std::ostream& operator<< (std::ostream& out, const TFrac& d);
 	friend TFrac operator+(const TFrac& d1, const TFrac& d2);
