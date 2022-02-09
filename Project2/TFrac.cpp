@@ -16,6 +16,7 @@ bool operator< (const TFrac& d1, const TFrac& d2)
 };
 
 
+
 std::ostream& operator<< (std::ostream& out, const TFrac& d)
 {
     out << d.numerator << "/" << d.denominator;

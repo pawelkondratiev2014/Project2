@@ -19,8 +19,8 @@ int main()
 	InOutDo::Output(m);
 	InOutDo::SortUp(m);
 	InOutDo::Output(m);
-	//InOutDo::SortDown(m);
-	//InOutDo::Output(m);
+	InOutDo::SortDown(m);
+	InOutDo::Output(m);
 	std::cout << InOutDo::Sum(m) << std::endl;
 
 

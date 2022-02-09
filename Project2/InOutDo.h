@@ -50,14 +50,14 @@ public:
 
 	static void SortUp(std::list<TFrac>& m)
 	{
-
-		
+		m.sort();		
 	};
 
-	//static void SortDown(Е)
-	//{
-	//	//—ортируем вектор по убыванию
-	//}
+	static void SortDown(std::list<TFrac>& m)
+	{
+		m.sort();
+		m.reverse();
+	};
 };
 
 
