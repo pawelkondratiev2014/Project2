@@ -1,6 +1,8 @@
 #ifndef TFrac_H
 #define TFrac_H
 
+
+
 class TFrac
 {
 private:
@@ -8,11 +10,12 @@ private:
 	int denominator;
 public:
 
+
+
 	//конструктор для ввода через числа
-	TFrac(int m_numerator, int m_denumerator) : numerator(m_numerator), denominator(m_denumerator)
+	TFrac(int m_numerator=0, int m_denumerator=1) : numerator(m_numerator), denominator(m_denumerator)
 	{
-		// проверяем знаменатель на ноль
-		assert(m_denumerator != 0 && "denominator=0");
+		
 		// мы поместили метод reduce() в конструктор, чтобы убедиться, что все дроби, которые у нас есть, будут уменьшены
 		reduce();
 	};
@@ -64,9 +67,11 @@ public:
 		};
 
 		numerator = std::stoi(m_numerator) * znak;
+		if (std::stoi(m_denominator) == 0)
+			denominator = 1;
+		else
 		denominator = std::stoi(m_denominator);
-		// проверяем знаменатель на ноль
-		assert(denominator != 0 && "denominator=0");
+		
 
 		// мы поместили метод reduce() в конструктор, чтобы убедиться, что все дроби, которые у нас есть, будут уменьшены
 		reduce();

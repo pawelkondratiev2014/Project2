@@ -4,6 +4,12 @@
 
 class InOutDo
 {
+private:
+	TFrac myfun(TFrac x, TFrac y)
+	{
+		return x + y;
+	};
+
 public:
 	static void Input(std::list<TFrac> &m)
 	{
@@ -33,18 +39,27 @@ public:
 		std::cout << '\n';
 	};
 
+
+
 	static TFrac Sum(std::list<TFrac>& m)
 	{
-		std::list<TFrac>::const_iterator it;
-		it = m.begin();
-		TFrac sum(*it);
-		++it;
+		//std::list<TFrac>::const_iterator it;
+		//it = m.begin();
+		//TFrac sum(*it);
+		//++it;
 
-		while (it != m.end()) // пока итератор не достигнет последнего элемента
-		{
-			sum= sum+(*it);
-			++it; // и переходим к следующему элементу
-		};
+		//while (it != m.end()) // пока итератор не достигнет последнего элемента
+		//{
+		//	sum= sum+(*it);
+		//	++it; // и переходим к следующему элементу
+		//};
+
+		std::list<TFrac>::const_iterator it;	
+		it = m.begin();
+		TFrac sum(0);
+
+		sum=std::accumulate(m.begin(), m.end(), sum, std::plus<TFrac>());
+
 		return sum;
 	};
 

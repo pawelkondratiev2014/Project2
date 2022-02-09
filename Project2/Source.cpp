@@ -4,6 +4,7 @@
 #include <clocale>
 #include <list>
 #include <algorithm>
+#include <numeric>
 
 #include "TFrac.h"
 #include "InOutDo.h"
